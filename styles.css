@@ -15,11 +15,11 @@
   position: relative;
   background: linear-gradient(
     135deg,
-    #ff9a9e 0%,
-    #ffb3d9 25%,
-    #ffb3d9 50%,
-    #ffe97d 75%,
-    #ffd700 100%
+    #ffffff 0%,
+    #ffffff 25%,
+    #fafafa 50%,
+    #f5f5f5 75%,
+    #eeeeee 100%
   );
   background-attachment: fixed;
   background-size: 400% 400%;
@@ -46,11 +46,11 @@
   height: 100%;
   background: linear-gradient(
     135deg,
-    rgba(255, 154, 158, 0.7) 0%,
-    rgba(254, 207, 239, 0.6) 25%,
-    rgba(254, 207, 239, 0.6) 50%,
-    rgba(255, 233, 125, 0.6) 75%,
-    rgba(255, 215, 0, 0.7) 100%
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.8) 25%,
+    rgba(250, 250, 250, 0.7) 50%,
+    rgba(245, 245, 245, 0.8) 75%,
+    rgba(238, 238, 238, 0.9) 100%
   );
   z-index: -1;
 }
@@ -68,13 +68,13 @@
   justify-content: center;
   background: linear-gradient(
     135deg,
-    #ff9a9e 0%,
-    #ffb3d9 25%,
-    #ffb3d9 50%,
-    #ffe97d 75%,
-    #ffd700 100%
+    #ffffff 0%,
+    #ffffff 25%,
+    #fafafa 50%,
+    #f5f5f5 75%,
+    #eeeeee 100%
   );
-  color: white;
+  color: #333333;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -106,6 +106,121 @@
 /* Ensure video doesn't interfere with content */
 .video-bg {
   pointer-events: none;
+}
+
+/* CSS Magic for Buttons */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.magic-button {
+  position: relative;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.magic-button:hover {
+  transform: translateY(-1px);
+}
+
+.magic-button:active {
+  transform: translateY(0);
+}
+
+/* Flat Button Styles */
+.magic-button {
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  color: #374151;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.magic-button:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Primary Button - Green */
+.btn-primary {
+  background: #10b981;
+  color: white;
+  border: 2px solid #10b981;
+}
+
+.btn-primary:hover {
+  background: #059669;
+  border-color: #059669;
+}
+
+/* Secondary Button - GitHub Colors */
+.btn-secondary {
+  background: #24292e;
+  color: white;
+  border: 2px solid #24292e;
+}
+
+.btn-secondary:hover {
+  background: #1a1e22;
+  border-color: #1a1e22;
+}
+
+/* Text shadows for better readability on white background */
+.text-shadow-strong {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-shadow-medium {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2), 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-shadow-light {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Magic */
+@media (max-width: 768px) {
+  .button-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .magic-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Special Effects */
+.magic-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.magic-button:active::after {
+  width: 300px;
+  height: 300px;
 }
 
 /* Gradient shift animation */
