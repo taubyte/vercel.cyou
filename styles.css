@@ -1,0 +1,215 @@
+/* Custom CSS for Taubyte Landing Page */
+
+/* Palestine gradient for text */
+.palestine-gradient {
+  background: linear-gradient(135deg, #e4312b 0%, #007a3d 100%);
+}
+
+/* Text shadow utility */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Main hero background with video overlay */
+.hero-bg {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #ff9a9e 0%,
+    #ffb3d9 25%,
+    #ffb3d9 50%,
+    #ffe97d 75%,
+    #ffd700 100%
+  );
+  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Background video container */
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Video overlay for better text readability */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 154, 158, 0.7) 0%,
+    rgba(254, 207, 239, 0.6) 25%,
+    rgba(254, 207, 239, 0.6) 50%,
+    rgba(255, 233, 125, 0.6) 75%,
+    rgba(255, 215, 0, 0.7) 100%
+  );
+  z-index: -1;
+}
+
+/* Video fallback styling */
+.video-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #ff9a9e 0%,
+    #ffb3d9 25%,
+    #ffb3d9 50%,
+    #ffe97d 75%,
+    #ffd700 100%
+  );
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  z-index: -2;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.video-fallback p {
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.video-fallback .text-lg {
+  font-size: 1.5rem;
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+/* Video controls and accessibility */
+.video-bg::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-bg::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+/* Ensure video doesn't interfere with content */
+.video-bg {
+  pointer-events: none;
+}
+
+/* Gradient shift animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Tech pattern overlay */
+.tech-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Gradient overlay utility */
+.gradient-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1) 0%,
+    rgba(118, 75, 162, 0.1) 100%
+  );
+}
+
+/* Card gradient with glass morphism */
+.card-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Header gradient with glass morphism */
+.header-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.7) 100%
+  );
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Footer gradient with glass morphism */
+.footer-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Button hover effects */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .hero-bg {
+    background-size: 200% 200%;
+  }
+}
+
+/* Print styles */
+@media print {
+  .hero-bg {
+    background: white !important;
+  }
+
+  .card-gradient,
+  .header-gradient,
+  .footer-gradient {
+    background: white !important;
+    backdrop-filter: none !important;
+  }
+}

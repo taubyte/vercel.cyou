@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taubyte: Ethical Cloud Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "palestine-red": "#E4312B",
+              "palestine-green": "#007A3D",
+              "palestine-black": "#000000",
+              "palestine-white": "#FFFFFF",
+              "palestine-gold": "#FFD700",
+            },
+            animation: {
+              "fade-in": "fadeIn 1s ease-in-out",
+              "pulse-gentle": "pulse 2s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="h-screen overflow-hidden hero-bg tech-pattern">
+    <!-- Background Video -->
+    <video class="video-bg" autoplay muted loop playsinline>
+      <!-- Replace with actual Palestine march videos from Ireland/USA -->
+      <source src="videos/palestine-march-ireland.mp4" type="video/mp4" />
+      <source src="videos/palestine-march-usa.mp4" type="video/mp4" />
+      <!-- Fallback for browsers that don't support video -->
+      <div class="video-fallback">
+        <p>🇵🇸 Palestine Solidarity Marches - Ireland & USA 🇵🇸</p>
+        <p class="text-lg mt-4">
+          Stand with Palestine. Choose ethical technology.
+        </p>
+      </div>
+    </video>
+
+    <!-- Video Overlay -->
+    <div class="video-overlay"></div>
+
+    <!-- Main Container -->
+    <div class="h-full flex flex-col relative z-10">
+      <!-- Header -->
+      <header class="header-gradient shadow-sm px-6 py-4">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+          <h1 class="text-2xl font-bold text-palestine-black">Taubyte</h1>
+          <div class="flex space-x-6">
+            <span class="text-sm text-gray-600">Ethical Technology</span>
+            <span class="text-sm text-gray-600">Open Source</span>
+            <span class="text-sm text-gray-600">Privacy First</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="flex-1 flex items-center justify-center px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <!-- Main Message -->
+          <div class="mb-12 animate-fade-in">
+            <h1
+              class="text-5xl md:text-7xl font-bold text-palestine-black mb-6"
+            >
+              Deploy with
+              <span class="palestine-gradient bg-clip-text text-transparent"
+                >Freedom</span
+              >
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
+              Choose ethical technology. Open source. Privacy first.
+              <span class="font-semibold text-palestine-green"
+                >No vendor lock-in.</span
+              >
+            </p>
+          </div>
+
+          <!-- Alternative Message -->
+          <div
+            class="card-gradient rounded-2xl shadow-xl p-8 mb-12 animate-fade-in"
+            style="animation-delay: 0.3s"
+          >
+            <h2 class="text-2xl font-bold text-palestine-black mb-6">
+              Why Choose Taubyte Over Big Tech?
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+              <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                  <div class="w-3 h-3 bg-palestine-red rounded-full"></div>
+                  <span class="text-gray-700"
+                    >Vendor lock-in with proprietary platforms</span
+                  >
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div class="w-3 h-3 bg-palestine-red rounded-full"></div>
+                  <span class="text-gray-700"
+                    >Data harvesting and surveillance</span
+                  >
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div class="w-3 h-3 bg-palestine-red rounded-full"></div>
+                  <span class="text-gray-700"
+                    >High costs and unpredictable pricing</span
+                  >
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                  <div class="w-3 h-3 bg-palestine-green rounded-full"></div>
+                  <span class="text-gray-700"
+                    >Taubyte: 100% open source platform</span
+                  >
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div class="w-3 h-3 bg-palestine-green rounded-full"></div>
+                  <span class="text-gray-700"
+                    >Privacy-first, no data collection</span
+                  >
+                </div>
+                <div class="flex items-center space-x-3">
+                  <div class="w-3 h-3 bg-palestine-green rounded-full"></div>
+                  <span class="text-gray-700"
+                    >Transparent pricing, no hidden fees</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Call to Action -->
+          <div class="space-y-6 animate-fade-in" style="animation-delay: 0.6s">
+            <div
+              class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <button
+                class="bg-palestine-green hover:bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Start Deploying
+              </button>
+              <button
+                class="bg-palestine-red hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                View Documentation
+              </button>
+            </div>
+            <p class="text-sm text-gray-600">
+              Join thousands of developers choosing freedom over vendor lock-in
+            </p>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer-gradient text-white py-6 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0"
+          >
+            <p class="text-palestine-gold font-semibold">
+              Open source • Privacy first • Developer freedom
+            </p>
+            <div class="flex space-x-4 text-sm">
+              <span class="text-palestine-gold">No Vendor Lock-in</span>
+              <span class="text-palestine-gold">•</span>
+              <span class="text-palestine-gold">Transparent Pricing</span>
+              <span class="text-palestine-gold">•</span>
+              <span class="text-palestine-gold">Community Driven</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Palestinian Flag Colors Bar -->
+    <div class="fixed bottom-0 left-0 right-0 h-2 flex">
+      <div class="flex-1 bg-palestine-black"></div>
+      <div class="flex-1 bg-palestine-white"></div>
+      <div class="flex-1 bg-palestine-green"></div>
+      <div class="flex-1 bg-palestine-red"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
